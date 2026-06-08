@@ -1,0 +1,35 @@
+﻿# ============================================================
+# 音頻自動審核系統 - 粵語版配置文件
+# ============================================================
+
+# --- API 配置 ---
+api:
+  provider: qwen              # 目前支持: qwen (預留 openai / gemini)
+  model: qwen-audio-turbo     # Qwen 音頻模型
+  api_key: "your-dashscope-api-key-here"  # 替換為你的百煉 API Key
+  base_url: ""                # 預留，Qwen SDK 自動處理
+
+# --- 審核配置 ---
+review:
+  batch_size: 5               # 並發處理數量
+  request_delay: 1.0          # 兩次請求間隔（秒），避免限流
+  timeout: 60                 # 單次 API 超時時間（秒）
+
+# --- 文件匹配 ---
+matching:
+  # Excel 列名映射
+  col_role: 角色
+  col_speed: 語速
+  col_tone: 語氣
+  col_text: 台詞/旁白
+  # 文件名解析正則（角色名+編號：台詞內容.wav）
+  filename_pattern: "^(?P<role>.+?)(?P<index>\\d+)[：:](?P<text>.+)\\.wav$"
+
+# --- 輸出配置 ---
+output:
+  report_dir: reports         # 報告輸出目錄
+  report_prefix: 審核報告_粵語版  # 報告文件名前綴
+  include_passed: true        # 報告中是否包含通過的條目
+  color_coding: true          # Excel 中是否使用顏色標記
+
+# --- 香港粵語用語映射（可在此擴展，也可使用 glossary_hk.json）---

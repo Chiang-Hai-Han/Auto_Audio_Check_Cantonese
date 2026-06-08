@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.ui_state.json
+reports/
+
+# local temp/debug files
+_p.py
+_p2.py
+_patch_scanner.py
+
+# editor / OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,26 @@
+{
+  "_comment": "音频自动审核系统 - 粤语版配置",
+  "api": {
+    "provider": "openai",
+    "model": "qwen3.5-omni-plus",
+    "api_key": "your-dashscope-api-key-here",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  },
+  "review": {
+    "batch_size": 5,
+    "request_delay": 1.0,
+    "timeout": 60
+  },
+  "matching": {
+    "col_role": "角色",
+    "col_speed": "语速",
+    "col_tone": "语气",
+    "col_text": "台词/旁白"
+  },
+  "output": {
+    "report_dir": "reports",
+    "report_prefix": "审核报告_粤语版",
+    "include_passed": true,
+    "color_coding": true
+  }
+}

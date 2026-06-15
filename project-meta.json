@@ -1,0 +1,27 @@
+{
+  "name": "Auto_Audio_Check_Cantonese",
+  "description": "粤语配音自动审核工具 - 音频扫描、Excel预整理、Qwen AI审核、报告导出",
+  "type": "tool",
+  "status": "active",
+  "maturity": "production",
+  "owner": "海瀚",
+  "repository": "https://github.com/Chiang-Hai-Han/Auto_Audio_Check_Cantonese",
+  "language": "Python",
+  "framework": "Streamlit + DashScope (Qwen)",
+  "platform": ["Windows"],
+  "version": "0.1.0",
+  "features": [
+    "音频文件扫描与文件名解析",
+    "拆分Excel自动汇总与音频匹配",
+    "Qwen模型AI音频审核（内容/发音/语调）",
+    "香港粤语用词检查",
+    "Streamlit前端界面",
+    "Excel审核报告导出"
+  ],
+  "requirements": [
+    "Python 3.10+",
+    "阿里云百炼API Key"
+  ],
+  "last_updated": "2026-06-08",
+  "license": "MIT"
+}
